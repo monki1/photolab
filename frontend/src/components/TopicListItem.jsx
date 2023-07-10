@@ -1,16 +1,18 @@
 import React from 'react';
 
-import '../styles/TopicListItem'
+import '../styles/TopicListItem.scss';
 
-const TopicListItem = () => {
-  <div className="topic-list__item">
-    {/* Insert React */}
-  </div>
-}
+const TopicListItem = (props) => {
+  const { onLoadTopic, title, id } = props;
 
-TopicListItem.defaultProps =   {
-  "id": "1",
-  "slug": "topic-1",
-  "label": "Nature"
-}
-export default TopicListItem
+  return (
+    <div className="topic-list--item" onClick={() => { onLoadTopic(id); }}>
+      <span>
+        {title}
+      </span>
+    </div>
+  );
+
+};
+
+export default TopicListItem;
