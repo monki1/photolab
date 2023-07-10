@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './TopicList.scss';
+import '../styles/TopicList.scss';
 
 const TopicList = () => {
   <div className="top-nav-bar__topic-list">
